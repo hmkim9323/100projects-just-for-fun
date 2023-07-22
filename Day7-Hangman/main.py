@@ -4,6 +4,11 @@ word_list = ["aardvark", "baboon", "camel"]
 
 import random
 
+from hangman_words import word_list
+from hangman_art import logo, stages
+
+print(logo)
+
 chosen_word = random.choice(word_list)
 
 print(f'Pssst, the solution is {chosen_word}.')
@@ -28,6 +33,7 @@ while not end_of_game:
             print(display)
 
     if checkFlag == False:
+        print(stages[5-lifeCount])
         lifeCount += 1
 
     if lifeCount == deathMomemt:
